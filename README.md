@@ -15,7 +15,7 @@ Descarga el repositorio o clona este proyecto:
 
 bash
 Copiar código
-git clone https://github.com/tu_usuario/ludopingping.git
+git clone https://github.com/sergiocoba/LudoPingPong.git
 Instala las dependencias si es necesario.
 
 ¡A jugar! Abre el juego, selecciona tu modo de juego y prepárate para una experiencia de ping pong única.
