@@ -149,7 +149,7 @@ shape = SubResource( 4 )
 [node name="Bola" type="Sprite" parent="Ball/ColisionBola"]
 position = Vector2( 0.000244141, 0.00012207 )
 rotation = 0.00990664
-scale = Vector2( 0.231781, 0.198321 )
+scale = Vector2( 0.230305, 0.185701 )
 texture = ExtResource( 5 )
 
 [node name="Area2DDerecha" type="Area2D" parent="."]
