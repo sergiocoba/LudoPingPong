@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://bolas/TEXTOS/New Project (11).png" type="Texture" id=1]
+[ext_resource path="res://bolas/TEXTOS/New Project (10).png" type="Texture" id=2]
+[ext_resource path="res://bolas/TEXTOS/New Project (8).png" type="Texture" id=3]
+[ext_resource path="res://bolas/TEXTOS/New Project (9).png" type="Texture" id=4]
+[ext_resource path="res://Bolas.gd" type="Script" id=5]
+[ext_resource path="res://bolas/josep.png" type="Texture" id=6]
+[ext_resource path="res://bolas/pngtree-green-go-button-communication-png-image_9624976.png" type="Texture" id=7]
+
+[node name="Bolas" type="Node2D"]
+position = Vector2( 2, 2 )
+script = ExtResource( 5 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 105.0
+margin_top = 173.0
+margin_right = 1122.0
+margin_bottom = 1185.0
+rect_scale = Vector2( 0.239598, 0.294384 )
+
+[node name="Porti" type="TextureButton" parent="GridContainer"]
+margin_right = 1017.0
+margin_bottom = 129.0
+texture_normal = ExtResource( 3 )
+
+[node name="Josep" type="TextureButton" parent="GridContainer"]
+margin_top = 133.0
+margin_right = 1017.0
+margin_bottom = 421.0
+texture_normal = ExtResource( 4 )
+
+[node name="Vini" type="TextureButton" parent="GridContainer"]
+margin_top = 425.0
+margin_right = 1017.0
+margin_bottom = 662.0
+texture_normal = ExtResource( 2 )
+
+[node name="Pedrito" type="TextureButton" parent="GridContainer"]
+margin_top = 666.0
+margin_right = 1017.0
+margin_bottom = 1012.0
+texture_normal = ExtResource( 1 )
+
+[node name="bolaSelect" type="Sprite" parent="."]
+position = Vector2( 715, 234 )
+scale = Vector2( 1.48942, 1.48942 )
+texture = ExtResource( 6 )
+
+[node name="Go" type="TextureButton" parent="."]
+margin_left = 881.0
+margin_top = 465.0
+margin_right = 1241.0
+margin_bottom = 825.0
+rect_scale = Vector2( 0.3151, 0.3151 )
+texture_normal = ExtResource( 7 )
+
+[connection signal="pressed" from="GridContainer/Porti" to="." method="_on_Porti_pressed"]
+[connection signal="pressed" from="GridContainer/Josep" to="." method="_on_Josep_pressed"]
+[connection signal="pressed" from="GridContainer/Vini" to="." method="_on_Vini_pressed"]
+[connection signal="pressed" from="GridContainer/Pedrito" to="." method="_on_Pedrito_pressed"]
+[connection signal="pressed" from="Go" to="." method="_on_Go_pressed"]
