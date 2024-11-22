@@ -6,6 +6,7 @@ var bolas = {
 	"Josep": preload("res://bolas/josep.png"),
 	"Vini": preload("res://bolas/Vini.png"),
 	"Pedrito": preload("res://bolas/Pedrito.png"),
+	"Quero": preload("res://bolas/quero.png"),
 	
 }
 
@@ -43,3 +44,8 @@ func _on_Go_pressed():
 	
 	get_tree().change_scene("res://World.tscn")
 	
+
+
+func _on_Quero_pressed():
+	cambiar_imagen_bola("Quero")
+	seleccionado = 1;

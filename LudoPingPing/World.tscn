@@ -19,7 +19,7 @@ extents = Vector2( 10.5, 66 )
 bounce = 1.0
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 20.0
+radius = 27.0
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 16.5, 309.5 )
@@ -147,9 +147,8 @@ script = ExtResource( 3 )
 shape = SubResource( 4 )
 
 [node name="Bola" type="Sprite" parent="Ball/ColisionBola"]
-position = Vector2( 0.000244141, 0.00012207 )
 rotation = 0.00990664
-scale = Vector2( 0.230305, 0.185701 )
+scale = Vector2( 0.186122, 0.192201 )
 texture = ExtResource( 5 )
 
 [node name="Area2DDerecha" type="Area2D" parent="."]

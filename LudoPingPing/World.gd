@@ -12,6 +12,7 @@ var bolas = {
 	"Josep": preload("res://bolas/josep.png"),
 	"Vini": preload("res://bolas/Vini.png"),
 	"Pedrito": preload("res://bolas/Pedrito.png"),
+	"Quero": preload("res://bolas/quero.png"),
 }
 
 func _ready():
