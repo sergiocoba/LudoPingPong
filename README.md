@@ -23,7 +23,7 @@ Instala las dependencias si es necesario.
 👥 Creadores
 Sergio Coba
 Nick Bermudez
-Iker Hormiga Atomica
+Iker Serna
 Cada uno de nosotros ha contribuido con su toque especial para hacer de LudoPingPing un juego divertido y emocionante para todos.
 
 📜 Licencia
