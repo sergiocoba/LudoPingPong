@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pngtree-green-go-button-communication-png-image_9624976.png-b1cab77669c0c90b3f2c0bf8242a5598.stex"
+path="res://.import/image-removebg-preview (4).png-09d018f34eaf23f95ca70a2f835e5cd3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bolas/pngtree-green-go-button-communication-png-image_9624976.png"
-dest_files=[ "res://.import/pngtree-green-go-button-communication-png-image_9624976.png-b1cab77669c0c90b3f2c0bf8242a5598.stex" ]
+source_file="res://img/image-removebg-preview (4).png"
+dest_files=[ "res://.import/image-removebg-preview (4).png-09d018f34eaf23f95ca70a2f835e5cd3.stex" ]
 
 [params]
 

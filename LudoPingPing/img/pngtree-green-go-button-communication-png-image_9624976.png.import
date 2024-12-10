@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LogoLudoPingPong-removebg.png-f856e48180b597b48550d32965c9b58b.stex"
+path="res://.import/pngtree-green-go-button-communication-png-image_9624976.png-03f8f5807bcc3b108fe0e16deb8872b4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bolas/LogoLudoPingPong-removebg.png"
-dest_files=[ "res://.import/LogoLudoPingPong-removebg.png-f856e48180b597b48550d32965c9b58b.stex" ]
+source_file="res://img/pngtree-green-go-button-communication-png-image_9624976.png"
+dest_files=[ "res://.import/pngtree-green-go-button-communication-png-image_9624976.png-03f8f5807bcc3b108fe0e16deb8872b4.stex" ]
 
 [params]
 

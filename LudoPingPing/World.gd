@@ -13,8 +13,10 @@ var bolas = {
 }
 
 func _ready():
+  # Asegúrate de que muestra algo como: "res://path/to/image.png"
 	var Bola = get_node("/root/World/Ball/ColisionBola/Bola")
-	Bola.texture = bolas[Globals.bola_seleccionada]
+	Bola.texture = load(Globals.bola_seleccionada)
+	$estadio.texture = load(Globals.estadio)
 
 
 

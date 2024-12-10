@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://img/image-removebg-preview (4).png" type="Texture" id=2]
+[ext_resource path="res://img/blue-arrow-button-png (1).png" type="Texture" id=3]
+[ext_resource path="res://img/blue-arrow-button-png.webp" type="Texture" id=4]
+[ext_resource path="res://SeleccionarBola.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="PanelBola" type="Panel" parent="."]
+margin_left = 202.0
+margin_top = 11.0
+margin_right = 637.0
+margin_bottom = 410.0
+rect_scale = Vector2( 1.46595, 1.33555 )
+
+[node name="Label" type="Label" parent="PanelBola"]
+margin_left = 107.098
+margin_top = 14.2264
+margin_right = 312.098
+margin_bottom = 52.2264
+custom_fonts/font = SubResource( 1 )
+text = "SELECCIONA UNA BOLA"
+
+[node name="BotonSiguiente" type="TextureButton" parent="PanelBola"]
+margin_left = 349.944
+margin_top = 185.691
+margin_right = 1285.94
+margin_bottom = 1121.69
+rect_scale = Vector2( 0.056536, 0.056536 )
+texture_normal = ExtResource( 4 )
+
+[node name="BotonAnterior" type="TextureButton" parent="PanelBola"]
+margin_left = 20.4644
+margin_top = 182.696
+margin_right = 956.464
+margin_bottom = 1118.7
+rect_scale = Vector2( 0.0545878, 0.0595072 )
+texture_normal = ExtResource( 3 )
+
+[node name="BotonConfirmar" type="TextureButton" parent="PanelBola"]
+margin_left = 162.0
+margin_top = 310.0
+margin_right = 696.0
+margin_bottom = 777.0
+rect_scale = Vector2( 0.226503, 0.226503 )
+texture_normal = ExtResource( 2 )
+
+[node name="VistaPersonajePlayer" type="Sprite" parent="PanelBola"]
+position = Vector2( 218.288, 183.445 )
+scale = Vector2( 0.582751, 0.573896 )

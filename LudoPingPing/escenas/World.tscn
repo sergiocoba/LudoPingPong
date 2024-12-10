@@ -6,7 +6,7 @@
 [ext_resource path="res://World.gd" type="Script" id=4]
 [ext_resource path="res://bolas/porti.png" type="Texture" id=5]
 [ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://pingpong.mp3" type="AudioStream" id=7]
+[ext_resource path="res://campos/CampoFutbol.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 526, 15.5 )
@@ -37,6 +37,11 @@ extents = Vector2( 16.5, 309.5 )
 [node name="World" type="Node2D"]
 script = ExtResource( 4 )
 
+[node name="estadio" type="Sprite" parent="."]
+position = Vector2( 510, 300 )
+scale = Vector2( 1.00349, 0.998396 )
+texture = ExtResource( 7 )
+
 [node name="MundoDecoracion" type="Node" parent="."]
 
 [node name="muroArriba" type="StaticBody2D" parent="MundoDecoracion"]
@@ -48,57 +53,66 @@ shape = SubResource( 1 )
 [node name="muroAbajo" type="StaticBody2D" parent="MundoDecoracion"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MundoDecoracion/muroAbajo"]
-position = Vector2( 521.5, 602.5 )
+position = Vector2( 509, 608 )
 shape = SubResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="MundoDecoracion"]
+visible = false
 margin_top = -8.0
 margin_right = 1051.0
 margin_bottom = 26.0
 
 [node name="ColorRect3" type="ColorRect" parent="MundoDecoracion"]
+visible = false
 margin_left = 513.0
 margin_top = 62.0
 margin_right = 521.0
 margin_bottom = 119.0
 
 [node name="ColorRect4" type="ColorRect" parent="MundoDecoracion"]
+visible = false
 margin_left = 513.0
 margin_top = 147.0
 margin_right = 521.0
 margin_bottom = 204.0
 
 [node name="ColorRect5" type="ColorRect" parent="MundoDecoracion"]
+visible = false
 margin_left = 513.0
 margin_top = 233.0
 margin_right = 521.0
 margin_bottom = 290.0
 
 [node name="ColorRect6" type="ColorRect" parent="MundoDecoracion"]
+visible = false
 margin_left = 513.0
 margin_top = 325.0
 margin_right = 521.0
 margin_bottom = 382.0
 
 [node name="ColorRect7" type="ColorRect" parent="MundoDecoracion"]
+visible = false
 margin_left = 513.0
 margin_top = 414.0
 margin_right = 521.0
 margin_bottom = 471.0
 
 [node name="ColorRect8" type="ColorRect" parent="MundoDecoracion"]
+visible = false
 margin_left = 513.0
 margin_top = 499.0
 margin_right = 521.0
 margin_bottom = 556.0
 
 [node name="ColorRect9" type="ColorRect" parent="MundoDecoracion"]
+visible = false
 margin_left = 513.0
 margin_top = 501.0
 margin_right = 521.0
 margin_bottom = 558.0
 
 [node name="ColorRect2" type="ColorRect" parent="MundoDecoracion"]
+visible = false
 margin_left = -4.0
 margin_top = 584.0
 margin_right = 1060.0
@@ -154,10 +168,6 @@ gravity_scale = 0.0
 contacts_reported = 2
 contact_monitor = true
 script = ExtResource( 3 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ball"]
-stream = ExtResource( 7 )
-autoplay = true
 
 [node name="ColisionBola" type="CollisionShape2D" parent="Ball"]
 shape = SubResource( 4 )
