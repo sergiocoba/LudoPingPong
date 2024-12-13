@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Player2.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://bolas/porti.png" type="Texture" id=5]
 [ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://campos/CampoFutbol.png" type="Texture" id=7]
+[ext_resource path="res://img/Fondo-gris-transparente-2.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 526, 15.5 )
@@ -33,6 +34,16 @@ radius = 27.0
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 16.5, 309.5 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 35
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 50
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
 
 [node name="World" type="Node2D"]
 script = ExtResource( 4 )
@@ -191,6 +202,55 @@ position = Vector2( -31, 14 )
 position = Vector2( 16.5, 299.5 )
 shape = SubResource( 5 )
 
+[node name="MenuPausa" type="Control" parent="." groups=["menu"]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="MenuPausa"]
+position = Vector2( 511, 296 )
+scale = Vector2( 1.71167, 1.01833 )
+texture = ExtResource( 8 )
+
+[node name="Reanudar" type="Button" parent="MenuPausa"]
+pause_mode = 2
+margin_left = 381.0
+margin_top = 140.0
+margin_right = 646.0
+margin_bottom = 195.0
+custom_fonts/font = SubResource( 9 )
+text = "REANUDAR"
+
+[node name="Reiniciar" type="Button" parent="MenuPausa"]
+pause_mode = 2
+margin_left = 380.0
+margin_top = 214.0
+margin_right = 645.0
+margin_bottom = 269.0
+custom_fonts/font = SubResource( 9 )
+text = "REINICIAR"
+
+[node name="Salir" type="Button" parent="MenuPausa"]
+pause_mode = 2
+margin_left = 377.0
+margin_top = 290.0
+margin_right = 642.0
+margin_bottom = 345.0
+custom_fonts/font = SubResource( 9 )
+text = "SALIR"
+
+[node name="Label" type="Label" parent="MenuPausa"]
+margin_left = 328.0
+margin_top = 61.0
+margin_right = 710.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 10 )
+text = "MENU PAUSA
+"
+
 [connection signal="body_entered" from="Ball" to="Ball" method="_on_Ball_body_entered"]
 [connection signal="body_entered" from="Area2DDerecha" to="." method="_on_Area2DDerecha_body_entered"]
 [connection signal="body_entered" from="Area2DIzquierda" to="." method="_on_Area2DIzquierda_body_entered"]
+[connection signal="pressed" from="MenuPausa/Reanudar" to="." method="_on_Reanudar_pressed"]
+[connection signal="pressed" from="MenuPausa/Reiniciar" to="." method="_on_Reiniciar_pressed"]
+[connection signal="pressed" from="MenuPausa/Salir" to="." method="_on_Salir_pressed"]
