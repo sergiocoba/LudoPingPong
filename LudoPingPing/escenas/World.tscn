@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Player2.gd" type="Script" id=2]
@@ -42,6 +42,11 @@ font_data = ExtResource( 6 )
 [sub_resource type="DynamicFont" id=10]
 size = 50
 outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 50
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
@@ -134,8 +139,19 @@ margin_left = 418.0
 margin_top = 60.0
 margin_right = 486.0
 margin_bottom = 137.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "0
+"
+
+[node name="Timer" type="Label" parent="."]
+margin_left = 450.0
+margin_top = 20.0
+margin_right = 574.0
+margin_bottom = 121.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "00:00
 "
 
 [node name="ScoreTextoDerecha" type="Label" parent="."]
@@ -143,6 +159,7 @@ margin_left = 561.0
 margin_top = 60.0
 margin_right = 625.0
 margin_bottom = 161.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "0
 "
@@ -221,6 +238,15 @@ margin_bottom = 195.0
 custom_fonts/font = SubResource( 9 )
 text = "REANUDAR"
 
+[node name="skins" type="Button" parent="MenuPausa"]
+pause_mode = 2
+margin_left = 676.0
+margin_top = 505.0
+margin_right = 1006.0
+margin_bottom = 560.0
+custom_fonts/font = SubResource( 9 )
+text = "CAMBIAR SKINS"
+
 [node name="Reiniciar" type="Button" parent="MenuPausa"]
 pause_mode = 2
 margin_left = 380.0
@@ -248,9 +274,24 @@ custom_fonts/font = SubResource( 10 )
 text = "MENU PAUSA
 "
 
+[node name="GolTimer" type="Timer" parent="."]
+
+[node name="resultado" type="Label" parent="."]
+visible = false
+margin_left = 254.0
+margin_top = 422.0
+margin_right = 767.0
+margin_bottom = 483.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+text = "JUGADOR X GANA"
+align = 1
+
 [connection signal="body_entered" from="Ball" to="Ball" method="_on_Ball_body_entered"]
 [connection signal="body_entered" from="Area2DDerecha" to="." method="_on_Area2DDerecha_body_entered"]
 [connection signal="body_entered" from="Area2DIzquierda" to="." method="_on_Area2DIzquierda_body_entered"]
 [connection signal="pressed" from="MenuPausa/Reanudar" to="." method="_on_Reanudar_pressed"]
+[connection signal="pressed" from="MenuPausa/skins" to="." method="_on_skins_pressed"]
+[connection signal="pressed" from="MenuPausa/skins" to="." method="_on_Reanudar_pressed"]
 [connection signal="pressed" from="MenuPausa/Reiniciar" to="." method="_on_Reiniciar_pressed"]
 [connection signal="pressed" from="MenuPausa/Salir" to="." method="_on_Salir_pressed"]
